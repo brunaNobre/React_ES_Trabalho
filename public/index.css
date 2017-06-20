@@ -1,0 +1,204 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    color: #212121;
+    background-color: #141414;
+}
+
+.App-header {
+    background-color: rgba(0, 0, 0, 0.5);
+    margin-top: -2%;
+    height: 7.5vw;
+}
+
+.App-header a {
+    color: #fff;
+    font-size: 20px;
+    text-decoration: none;
+    padding-right: 30px;
+    float: right;
+    margin-top: -6%;
+}
+
+.App-header h2 {
+    font-size: 40px;
+    color: #e50914;
+    padding: 1% 1.5%;
+}
+
+.App-header a:hover {
+    color: #e0e0e0;
+}
+
+.App-header a:last-child {
+
+    margin-right: 3%;
+}
+
+.App-header a:nth-last-child(2) {
+    margin-right: 9%;
+}
+
+.App-header a:nth-last-child(3) {
+    margin-right: 17%;
+}
+
+.container {
+    margin: 0 auto;
+    width: 980px;
+}
+
+.featured-movies {
+    display: flex;
+    justify-content: space-between;
+}
+
+.featured-movie {
+    text-align: left;
+    width: 24%;
+    float: right;
+    margin-left: 1%;
+    margin-bottom: 5%;
+}
+
+.featured-movies__header {
+    margin-bottom: 15px;
+    margin-top: 60px;
+    color: white;
+}
+
+.featured-movie__image img {
+    width: 100%;
+    max-height: 343px;
+    min-height: 343px;
+}
+
+.featured-movie p {
+    margin: 0;
+    cursor: default;
+    padding-bottom: 3px;
+    color: white;
+}
+
+.featured-movie p:first-child {
+    padding-top: 15px;
+    color: white;
+}
+
+hr {
+    margin-bottom: 15px;
+    background-color: #e0e0e0;
+    height: 1px;
+    border: 0;
+}
+
+.movie-title {
+    padding-top: 30px;
+    color: white;
+}
+
+.movie-image {
+    order: 1;
+    padding-right: 20px;
+}
+
+.movie-information {
+    order: 1;
+    text-align: left;
+    width: 100%;
+}
+
+.movie-information, .movie-reviews {
+    background: #f7f7f7;
+    box-shadow: 0px 5px 10px 0px #e8e6e6;
+    padding: 20px;
+    margin-bottom: 2%;
+}
+
+.movie-title h2, .movie-reviews h2 {
+    font-size: 32px;
+    margin: 0;
+}
+
+.movie-title hr {
+    margin-bottom: 30px;
+}
+
+.movie-container {
+    display: flex;
+}
+
+.movie-reviews {
+    text-align: left;
+    margin-top: 20px;
+}
+
+.review-author {
+    font-size: 12px;
+}
+
+.movie-listings {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.movie-listings .movie-image {
+    padding-right: 6px;
+}
+
+.page-not-found {
+    margin-top: 30px;
+    font-size: 32px;
+}
+
+
+/* Game */
+
+ol, ul {
+    padding-left: 30px;
+}
+
+.board-row:after {
+    clear: both;
+    content: "";
+    display: table;
+}
+
+.status {
+    margin-bottom: 5%;
+    color: wheat;
+    font-size: 4vw;
+}
+
+.square {
+    background: #fff;
+    border: 1px solid #999;
+    float: left;
+    font-size: 8vw;
+    font-weight: bold;
+    line-height: 34px;
+    height: 10vw;
+    margin-right: -1px;
+    margin-top: -1px;
+    padding: 0;
+    text-align: center;
+    width: 10vw;
+}
+
+.square:focus {
+    outline: none;
+}
+
+.kbd-navigation .square:focus {
+    background: #ddd;
+}
+
+.game {
+    display: flex;
+    flex-direction: row;
+}
+
+.game-info {
+    margin-left: 20px;
+}
