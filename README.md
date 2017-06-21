@@ -15,7 +15,7 @@ React utiliza uma extensão de sintaxe do JavaScript chamada JSX.
  conseguida através do [Virtual DOM](https://www.codecademy.com/articles/react-virtual-dom). Que é uma feature que garante que apenas<br>
  os elementos do DOM que sofreram alterações sejam atualizados.
  
- # Dependênciass Necessárias #
+ # Dependências Necessárias #
  
   - [Node.js](https://nodejs.org/en/) - ecosistema de pacotes.
   - [Webpack](https://webpack.github.io/) - gerenciamento de módulos e dependências
