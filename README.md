@@ -17,9 +17,9 @@ React utiliza uma extensão de sintaxe do JavaScript chamada JSX.
  
  # Dependências Necessárias #
  
-  - [Node.js](https://nodejs.org/en/) - ecosistema de pacotes.
-  - [Webpack](https://webpack.github.io/) - gerenciamento de módulos e dependências
-  - [Babel](https://babeljs.io/) -tradução dos componentes JSX
+  - [Node.js](https://nodejs.org/en/) - ecosistema de pacotes;
+  - [Webpack](https://webpack.github.io/) - gerenciamento de módulos e dependências;
+  - [Babel](https://babeljs.io/) - tradução dos componentes JSX.
   
  
 # Inicialização do Projeto #
