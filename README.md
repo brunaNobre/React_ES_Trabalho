@@ -48,4 +48,12 @@ Instalação do Babel
 
 ``` $ npm install --save-dev babel-core babel-loader babel-preset-react ```
 
+Instalação do React-Rouer e React-Router-DOM
+
+``` npm install --save react-router ```
+
+``` npm install --save react-router-dom ```
+
+
+
 
