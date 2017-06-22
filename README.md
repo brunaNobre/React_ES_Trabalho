@@ -17,6 +17,8 @@ React utiliza uma extensão de sintaxe do JavaScript chamada JSX.
  
  # Dependências Necessárias #
  
+  - [React](https://facebook.github.io/react/);
+  - [ReactRouter](https://www.npmjs.com/package/react-router);
   - [Node.js](https://nodejs.org/en/) - ecosistema de pacotes;
   - [Webpack](https://webpack.github.io/) - gerenciamento de módulos e dependências;
   - [Babel](https://babeljs.io/) - tradução dos componentes JSX.
@@ -45,6 +47,5 @@ Crie um arquivo [webpack.config.js](https://github.com/brunaNobre/React_ES_Traba
 Instalação do Babel
 
 ``` $ npm install --save-dev babel-core babel-loader babel-preset-react ```
-
 
 
