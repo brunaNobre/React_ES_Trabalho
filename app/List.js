@@ -18,7 +18,7 @@ export class List extends React.Component {
 
                 <hr />
 
-                <div>
+                <div className="row">
                     {topFour.map((movie, i) => (
 
                         <FeaturedMovie

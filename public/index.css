@@ -18,7 +18,7 @@ body {
     text-decoration: none;
     padding-right: 30px;
     float: right;
-    margin-top: -6%;
+
 }
 
 .App-header h2 {
@@ -31,35 +31,20 @@ body {
     color: #e0e0e0;
 }
 
-.App-header a:last-child {
 
-    margin-right: 3%;
-}
 
-.App-header a:nth-last-child(2) {
-    margin-right: 9%;
-}
 
-.App-header a:nth-last-child(3) {
-    margin-right: 17%;
-}
 
-.container {
+/*.container {
     margin: 0 auto;
     width: 980px;
-}
+}*/
 
-.featured-movies {
-    display: flex;
-    justify-content: space-between;
-}
+
 
 .featured-movie {
     text-align: left;
-    width: 24%;
-    float: right;
-    margin-left: 1%;
-    margin-bottom: 5%;
+    margin-bottom: 2%;
 }
 
 .featured-movies__header {
@@ -70,8 +55,7 @@ body {
 
 .featured-movie__image img {
     width: 100%;
-    max-height: 343px;
-    min-height: 343px;
+    display: block;
 }
 
 .featured-movie p {
@@ -153,52 +137,4 @@ hr {
 }
 
 
-/* Game */
 
-ol, ul {
-    padding-left: 30px;
-}
-
-.board-row:after {
-    clear: both;
-    content: "";
-    display: table;
-}
-
-.status {
-    margin-bottom: 5%;
-    color: wheat;
-    font-size: 4vw;
-}
-
-.square {
-    background: #fff;
-    border: 1px solid #999;
-    float: left;
-    font-size: 8vw;
-    font-weight: bold;
-    line-height: 34px;
-    height: 10vw;
-    margin-right: -1px;
-    margin-top: -1px;
-    padding: 0;
-    text-align: center;
-    width: 10vw;
-}
-
-.square:focus {
-    outline: none;
-}
-
-.kbd-navigation .square:focus {
-    background: #ddd;
-}
-
-.game {
-    display: flex;
-    flex-direction: row;
-}
-
-.game-info {
-    margin-left: 20px;
-}

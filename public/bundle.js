@@ -11435,38 +11435,11 @@ Link.contextTypes = {
 
 const FeaturedMovie = ({ movie }) => __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
     'div',
-    { className: 'featured-movie' },
+    { className: 'featured-movie col-sm-3' },
     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
         'div',
         { className: 'featured-movie__image' },
-        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-            __WEBPACK_IMPORTED_MODULE_1_react_router_dom__["b" /* Link */],
-            { to: `/movies/${movie.id}`, params: movie.id },
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { alt: movie.name, src: movie.image })
-        )
-    ),
-    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-        'div',
-        { className: 'featured-movie__info' },
-        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-            'p',
-            null,
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                'b',
-                null,
-                movie.name
-            )
-        ),
-        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-            'p',
-            null,
-            movie.director
-        ),
-        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-            'p',
-            null,
-            movie.released
-        )
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { alt: movie.name, src: movie.image, 'data-toggle': 'modal', 'data-target': '#myModal' })
     )
 );
 
@@ -11495,8 +11468,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__Home__ = __webpack_require__(226);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__Movie__ = __webpack_require__(227);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__List__ = __webpack_require__(228);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__Game__ = __webpack_require__(229);
-
 
 
 
@@ -11525,27 +11496,21 @@ var App = __WEBPACK_IMPORTED_MODULE_0_react___default.a.createClass({
                     ),
                     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                         __WEBPACK_IMPORTED_MODULE_2_react_router_dom__["b" /* Link */],
-                        { to: '/home' },
+                        { to: '/' },
                         'Home'
                     ),
                     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                         __WEBPACK_IMPORTED_MODULE_2_react_router_dom__["b" /* Link */],
-                        { to: '/list' },
+                        { to: 'list' },
                         'Movies'
-                    ),
-                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                        __WEBPACK_IMPORTED_MODULE_2_react_router_dom__["b" /* Link */],
-                        { to: '/game' },
-                        'Extra'
                     )
                 ),
                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                     'div',
                     { className: 'container' },
-                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2_react_router_dom__["c" /* Route */], { path: '/home', component: __WEBPACK_IMPORTED_MODULE_3__Home__["a" /* Home */] }),
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2_react_router_dom__["c" /* Route */], { path: '/home', component: __WEBPACK_IMPORTED_MODULE_3__Home__["a" /* default */] }),
                     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2_react_router_dom__["c" /* Route */], { path: '/movies/:movieId', component: __WEBPACK_IMPORTED_MODULE_4__Movie__["a" /* default */] }),
-                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2_react_router_dom__["c" /* Route */], { path: '/list', component: __WEBPACK_IMPORTED_MODULE_5__List__["a" /* default */] }),
-                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2_react_router_dom__["c" /* Route */], { path: '/game', component: __WEBPACK_IMPORTED_MODULE_6__Game__["a" /* Game */] })
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2_react_router_dom__["c" /* Route */], { path: '/list', component: __WEBPACK_IMPORTED_MODULE_5__List__["a" /* default */] })
                 )
             )
         );
@@ -25992,13 +25957,39 @@ NavLink.defaultProps = {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__movies_json__ = __webpack_require__(60);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__movies_json___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__movies_json__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__FeatureMovie__ = __webpack_require__(97);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ModalMovieDetail__ = __webpack_require__(232);
 
 
 
 
-class Home extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
 
-    render() {
+var Home = __WEBPACK_IMPORTED_MODULE_0_react___default.a.createClass({
+    displayName: 'Home',
+
+
+    getInitialState: function () {
+        return {
+            movieID: 0,
+            fade: "modal fade"
+
+        };
+    },
+
+    changeId: function (id) {
+        this.setState({
+            movieID: id
+        });
+    },
+
+    handleClick: function () {
+        this.setState({
+            fade: "modal fade esconde"
+
+        });
+    },
+
+    render: function () {
+
         const topFour = __WEBPACK_IMPORTED_MODULE_1__movies_json___default.a.slice(0, 4);
 
         return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
@@ -26012,17 +26003,20 @@ class Home extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('hr', null),
             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                 'div',
-                { className: 'featured-movies' },
+                { className: 'row' },
                 topFour.map((movie, i) => __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2__FeatureMovie__["a" /* default */], {
                     movie: movie,
                     key: i
+
                 }))
-            )
+            ),
+            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_3__ModalMovieDetail__["a" /* default */], { movieID: this.state.movieID, onClick: this.handleClick, fade: this.state.fade })
         );
     }
-}
-/* harmony export (immutable) */ __webpack_exports__["a"] = Home;
 
+});
+
+/* harmony default export */ __webpack_exports__["a"] = (Home);
 
 /***/ }),
 /* 227 */
@@ -26166,7 +26160,7 @@ class List extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('hr', null),
             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                 'div',
-                null,
+                { className: 'row' },
                 topFour.map((movie, i) => __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2__FeatureMovie__["a" /* default */], {
                     movie: movie,
                     key: i
@@ -26181,152 +26175,91 @@ class List extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
 /* harmony default export */ __webpack_exports__["a"] = (List);
 
 /***/ }),
-/* 229 */
+/* 229 */,
+/* 230 */,
+/* 231 */,
+/* 232 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(6);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__Board__ = __webpack_require__(230);
-
-
-
-class Game extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
-    render() {
-        return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-            'div',
-            { className: 'game' },
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                'div',
-                { className: 'game-board' },
-                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1__Board__["a" /* Board */], null)
-            ),
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                'div',
-                { className: 'game-info' },
-                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('div', null),
-                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('ol', null)
-            )
-        );
-    }
-}
-/* harmony export (immutable) */ __webpack_exports__["a"] = Game;
-
-
-/***/ }),
-/* 230 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__Square__ = __webpack_require__(231);
-
-
-
-function calculateWinner(squares) {
-    const lines = [[0, 1, 2], [3, 4, 5], [6, 7, 8], [0, 3, 6], [1, 4, 7], [2, 5, 8], [0, 4, 8], [2, 4, 6]];
-    for (let i = 0; i < lines.length; i++) {
-        const [a, b, c] = lines[i];
-        if (squares[a] && squares[a] === squares[b] && squares[a] === squares[c]) {
-            return squares[a];
-        }
-    }
-    return null;
-}
-
-class Board extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
-
-    constructor() {
-        super();
-        this.state = {
-            squares: Array(9).fill(null),
-            xIsNext: true
-        };
-    }
-
-    handleClick(i) {
-        const squares = this.state.squares.slice();
-        if (calculateWinner(squares) || squares[i]) {
-
-            return;
-        }
-        squares[i] = this.state.xIsNext ? 'X' : 'O';
-        this.setState({
-            squares: squares,
-            xIsNext: !this.state.xIsNext
-        });
-    }
-
-    renderSquare(i) {
-        return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1__Square__["a" /* default */], { value: this.state.squares[i], onClick: () => this.handleClick(i) });
-    }
-
-    render() {
-
-        const winner = calculateWinner(this.state.squares);
-        let status;
-        if (winner) {
-            status = 'Winner: ' + winner;
-        } else {
-            status = 'Next player: ' + (this.state.xIsNext ? 'X' : 'O');
-        }
-
-        return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-            'div',
-            null,
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                'div',
-                { className: 'status' },
-                status
-            ),
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                'div',
-                { className: 'board-row' },
-                this.renderSquare(0),
-                this.renderSquare(1),
-                this.renderSquare(2)
-            ),
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                'div',
-                { className: 'board-row' },
-                this.renderSquare(3),
-                this.renderSquare(4),
-                this.renderSquare(5)
-            ),
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                'div',
-                { className: 'board-row' },
-                this.renderSquare(6),
-                this.renderSquare(7),
-                this.renderSquare(8)
-            )
-        );
-    }
-}
-/* harmony export (immutable) */ __webpack_exports__["a"] = Board;
-
-
-/***/ }),
-/* 231 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (immutable) */ __webpack_exports__["a"] = Square;
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_router_dom__ = __webpack_require__(93);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__movies_json__ = __webpack_require__(60);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__movies_json___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__movies_json__);
 /**
- * Created by Bruna on 18/06/2017.
+ * Created by brualmei1 on 22/06/2017.
  */
 
 
-function Square(props) {
-    return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-        "button",
-        { className: "square", onClick: props.onClick },
-        props.value
-    );
-}
+
+
+var ModalMovieDetail = __WEBPACK_IMPORTED_MODULE_0_react___default.a.createClass({
+    displayName: 'ModalMovieDetail',
+
+
+    handleClick: function (e) {
+        e.preventDefault();
+        this.props.onClick();
+        var modalBackDrop = document.querySelector('.modal-backdrop');
+        modalBackDrop.parentNode.removeChild(modalBackDrop);
+    },
+
+    render: function () {
+
+        return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+            'div',
+            { className: this.props.fade, id: 'myModal', role: 'dialog' },
+            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                'div',
+                { className: 'modal-dialog' },
+                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                    'div',
+                    { className: 'modal-content' },
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                        'div',
+                        { className: 'modal-header' },
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                            'button',
+                            { type: 'button', className: 'close', 'data-dismiss': 'modal' },
+                            '\xD7'
+                        ),
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                            'h4',
+                            { className: 'modal-title' },
+                            'Modal Header'
+                        )
+                    ),
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                        'div',
+                        { className: 'modal-body' },
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                            __WEBPACK_IMPORTED_MODULE_1_react_router_dom__["b" /* Link */],
+                            { to: `/movies/${this.props.movieID}` },
+                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                'p',
+                                { onClick: this.handleClick },
+                                this.props.movieID
+                            )
+                        )
+                    ),
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                        'div',
+                        { className: 'modal-footer' },
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                            'button',
+                            { type: 'button', className: 'btn btn-default', 'data-dismiss': 'modal' },
+                            'Close'
+                        )
+                    )
+                )
+            )
+        );
+    }
+
+});
+
+/* harmony default export */ __webpack_exports__["a"] = (ModalMovieDetail);
 
 /***/ })
 /******/ ]);
