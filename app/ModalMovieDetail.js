@@ -38,12 +38,13 @@ var ModalMovieDetail = React.createClass({
                     <div className="modal-content">
 
                         <div className="modal-body">
+                            <img className="modal-img" src={movie.image} alt={movie.name}/>
                             <h4 className="modal-title">{movie.name}</h4>
                             <p>{movie.director}</p>
                             <p>{movie.released}</p>
-                            <Link to={`/movies/${this.props.movieID}`} onClick={this.handleClick}>
-                                <span className="fa fa-plus-square"></span>
-                            </Link>
+                            {/*<Link to={`/movies/${this.props.movieID}`} onClick={this.handleClick}>*/}
+
+
                         </div>
                         <div className="modal-footer">
                             <button type="button" className="modal-close" data-dismiss="modal">Close</button>

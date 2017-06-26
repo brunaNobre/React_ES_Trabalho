@@ -4963,6 +4963,7 @@ module.exports = [
 	{
 		"id": 1,
 		"name": "The Hateful Eight",
+		"rate": "9.5",
 		"director": "Quentin Tarantino",
 		"released": "December 25, 2015",
 		"image": "https://resizing.flixster.com/VLHYfL0mNnVFaA2VjqQbWCAiiew=/206x305/v1.bTsxMTI4NTM1NDtqOzE3NDU1OzEyMDA7ODEwMDsxMjAwMA",
@@ -4978,6 +4979,7 @@ module.exports = [
 	{
 		"id": 2,
 		"name": "Reservoir Dogs",
+		"rate": "9.4",
 		"director": "Quentin Tarantino",
 		"released": "October 23, 1992",
 		"image": "https://resizing.flixster.com/KKEjM_o4rI_JYuSc4EdEZJn2p0Q=/206x305/v1.bTsxMTE3NzYzMjtqOzE3NDU0OzEyMDA7ODAwOzEyMDA",
@@ -4993,6 +4995,7 @@ module.exports = [
 	{
 		"id": 3,
 		"name": "God Bless America",
+		"rate": "8.0",
 		"director": "Bobcat Goldthwait",
 		"released": "May 11, 2012",
 		"image": "https://resizing.flixster.com/hewkH52N7jt2ruj4gMaQz7L5Ezw=/206x305/v1.bTsxMTE2MzEwMDtqOzE3NDU0OzEyMDA7NDgwOzcxMQ",
@@ -5008,6 +5011,7 @@ module.exports = [
 	{
 		"id": 4,
 		"name": "Annie Hall",
+		"rate": "8.9",
 		"director": "Woody Allen",
 		"released": "April 20, 1977",
 		"image": "https://resizing.flixster.com/ZBZpwHtiGNyHXp3e9L9Yuukz_ro=/206x305/v1.bTsxMTIwNDg5ODtqOzE3NDU0OzEyMDA7MTM4MDsxODQw",
@@ -5023,6 +5027,7 @@ module.exports = [
 	{
 		"id": 5,
 		"name": "Das Cabinet Des Dr. Caligari. (The Cabinet of Dr. Caligari)",
+		"rate": "7.5",
 		"director": "Robert Wiene",
 		"released": "February 25, 1920",
 		"image": "https://resizing.flixster.com/yHp_zgyRz8u7CYqTxXEMKjQ8byU=/206x305/v1.bTsxMTIxMDkzMDtqOzE3NDU0OzEyMDA7MTQyNTsxOTAw",
@@ -5038,6 +5043,7 @@ module.exports = [
 	{
 		"id": 6,
 		"name": "Nosferatu, A Symphony of Horror",
+		"rate": "6.7",
 		"director": "F.W. Murnau",
 		"released": "March 3rd, 1922",
 		"image": "https://resizing.flixster.com/8fT8pPchFmZ0noiQcI68A54gYAg=/206x305/v1.bTsxMTIwNTI3NztqOzE3NDU0OzEyMDA7MTUzNjsyMDQ4",
@@ -5053,6 +5059,7 @@ module.exports = [
 	{
 		"id": 7,
 		"name": "Repulsion",
+		"rate": "8.2",
 		"director": "Roman Polanski",
 		"released": "October 2, 1965",
 		"image": "https://resizing.flixster.com/mM5GhjTFSs1HBcrWaP3SQiH2k1I=/206x305/v1.bTsxMTYxNTkxMDtqOzE3NDU5OzEyMDA7MzYwOzUwMA",
@@ -5068,6 +5075,7 @@ module.exports = [
 	{
 		"id": 8,
 		"name": "Pyscho",
+		"rate": "9.5",
 		"director": "Alfred Hitchcock",
 		"released": "June 15, 1960",
 		"image": "http://resizing.flixster.com/yaCgtycsvplwtX47Dm5QE7t5XIQ=/320x480/v1.bTsxMTE3Nzc5NztqOzE3MjA2OzIwNDg7ODAwOzEyMDA",
@@ -5083,6 +5091,7 @@ module.exports = [
 	{
 		"id": 9,
 		"name": "The Babadook",
+		"rate": "3.2",
 		"director": "Jennifer Kent",
 		"released": "November 17, 2014",
 		"image": "https://resizing.flixster.com/jfV0SsCxqZx5WJhZAl-5k-AJCug=/206x305/v1.bTsxMTE4MTE2NjtqOzE3NDU0OzEyMDA7Njc4Ozk5OQ",
@@ -26125,6 +26134,7 @@ var ModalMovieDetail = __WEBPACK_IMPORTED_MODULE_0_react___default.a.createClass
                     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                         'div',
                         { className: 'modal-body' },
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { className: 'modal-img', src: movie.image, alt: movie.name }),
                         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                             'h4',
                             { className: 'modal-title' },
@@ -26139,11 +26149,6 @@ var ModalMovieDetail = __WEBPACK_IMPORTED_MODULE_0_react___default.a.createClass
                             'p',
                             null,
                             movie.released
-                        ),
-                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                            __WEBPACK_IMPORTED_MODULE_1_react_router_dom__["b" /* Link */],
-                            { to: `/movies/${this.props.movieID}`, onClick: this.handleClick },
-                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('span', { className: 'fa fa-plus-square' })
                         )
                     ),
                     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
