@@ -26326,6 +26326,10 @@ const Movie = params => {
 
     const movie = __WEBPACK_IMPORTED_MODULE_1__movies_json___default.a.find(movie => movie.id === parseInt(params.match.params.movieId, 10));
 
+    var release = movie.released;
+    var stringSplit = release.split(' ');
+    var year = stringSplit[2];
+
     return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
         'div',
         { className: 'movie-page-container' },
@@ -26338,41 +26342,59 @@ const Movie = params => {
             'div',
             { className: 'movie-container' },
             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                'p',
+                { className: 'subtitle' },
+                'MOVIE ',
+                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                    'span',
+                    null,
+                    year
+                )
+            ),
+            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                 'div',
                 { className: 'movie-information' },
                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                     'p',
-                    null,
-                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                        'b',
-                        null,
-                        'Director:'
-                    ),
-                    ' ',
-                    movie.director
+                    { className: 'movie-title' },
+                    movie.name
                 ),
                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                     'p',
-                    null,
-                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                        'b',
-                        null,
-                        'Release Date:'
-                    ),
-                    ' ',
+                    { className: 'movie-more-info underline' },
+                    movie.director,
+                    ' - ',
                     movie.released
                 ),
                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                     'p',
-                    null,
+                    { className: 'social-info' },
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('span', { className: 'fa fa-heart-o' }),
+                    '3.251 likes'
+                ),
+                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                    'p',
+                    { className: 'social-info' },
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('span', { className: 'fa fa-comment-o' }),
+                    '+200 comments'
+                ),
+                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                    'p',
+                    { className: 'rating' },
                     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                        'b',
-                        null,
-                        'Description:'
-                    ),
-                    ' ',
-                    movie.description,
-                    ' '
+                        'span',
+                        { className: 'rate-container' },
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                            'span',
+                            { className: 'modal-rate' },
+                            movie.rate
+                        ),
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                            'span',
+                            { className: 'rate-detail' },
+                            '/10'
+                        )
+                    )
                 )
             )
         ),

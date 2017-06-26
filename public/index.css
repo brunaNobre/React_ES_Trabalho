@@ -15,7 +15,7 @@ ul {
 }
 
 .App-header {
-    background-color: rgba(29,30, 34, 0.98);
+    background-color: rgba(29,30, 34, 0.9);
     position: fixed;
     z-index: 9;
     width: 100%;
@@ -236,6 +236,78 @@ ul {
     width: 100%;
 }
 
+.movie-container {
+    padding: 4%;
+}
+
+.movie-container .subtitle {
+    color: #FF0D46;
+    font-weight: 900;
+    font-size: 1.2vw;
+}
+
+.movie-container .subtitle span {
+    color: white;
+    margin-left: 0.5%;
+}
+
+
+
+.movie-information p, .movie-information h3 {
+    color: white;
+}
+
+.movie-information .movie-title {
+    margin-top: 2%;
+    font-size: 5vw;
+    font-weight: 900;
+}
+
+.movie-information .movie-more-info {
+    font-size: 1.5vw;
+}
+
+.movie-information .social-info {
+    color: gray;
+    font-size: 1.4vw;
+}
+
+.movie-information .social-info span {
+    margin-right: 1.5%;
+    font-size: 130%;
+}
+
+.movie-information .rating {
+    position: absolute;
+    top: 45vw;
+    left: 35%;
+}
+
+.movie-information .rating .rate-container {
+    margin-left: -20%;
+    position: absolute;
+    top: 27%;
+    left: 39%;
+}
+
+
+
+.movie-information .rating .modal-rate {
+
+}
+
+.movie-information .rating .rate-detail {
+
+}
+
+.underline::after {
+    content: "";
+    display: block;
+    border-bottom: 3px solid #FF0D46;
+    margin-top: 4%;
+    width: 5%;
+    margin-bottom: 3%;
+}
 
 .movie-listings {
     display: flex;
