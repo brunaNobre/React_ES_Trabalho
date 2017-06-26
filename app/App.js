@@ -36,6 +36,17 @@ var App =  React.createClass ({
 
 
                     </div>
+                    <footer className="App-footer">
+                        <span className="fa fa-arrow-down"></span>
+                        <div className="App-navbar">
+                        <ul>
+                            <li><a href="#"><span className="fa fa-film"></span><p>MOVIES</p></a></li>
+                            <li><a href="#"><span className="fa fa-television"></span><p>TV SHOW</p></a></li>
+                            <li><a href="#"><span className="fa fa-heart-o"></span><p>WATCHLIST</p></a></li>
+                            <li><a href="#"><span className="fa fa-user-o"></span><p>PROFIL</p></a></li>
+                        </ul>
+                        </div>
+                    </footer>
                 </div>
             </HashRouter>
         );

@@ -38,16 +38,33 @@ var ModalMovieDetail = React.createClass({
                     <div className="modal-content">
 
                         <div className="modal-body">
+                            <Link to={`/movies/${this.props.movieID}`} onClick={this.handleClick}>
                             <img className="modal-img" src={movie.image} alt={movie.name}/>
+                            </Link>
                             <h4 className="modal-title">{movie.name}</h4>
-                            <p>{movie.director}</p>
-                            <p>{movie.released}</p>
-                            {/*<Link to={`/movies/${this.props.movieID}`} onClick={this.handleClick}>*/}
+                            <p className="modal-desc">{movie.director}</p>
+                            <p className="modal-desc">{movie.released}</p>
+
+                            <p className="rating">
+                                <span className="rate-container">
+                                <span className="modal-rate">{movie.rate}</span>
+                                <span className="rate-detail">/10</span>
+                                </span>
+                            </p>
+
+                            <div className="modal-card clear-fix">
+                                <ul>
+                                    <li><a href="#"><span className="fa fa-heart-o"></span><p>ADD TO WATCHLIST</p></a></li>
+                                    <li><a href="#"><span className="fa fa-play-circle-o"></span><p>PLAY LAST TRAILER</p></a></li>
+                                    <li><Link to={`/movies/${this.props.movieID}`} onClick={this.handleClick}>
+                                        <span className="fa fa-info"></span><p>SHOW ALL DETAILS</p></Link></li>
+                                </ul>
+                            </div>
 
 
                         </div>
                         <div className="modal-footer">
-                            <button type="button" className="modal-close" data-dismiss="modal">Close</button>
+                            <button type="button" className="modal-close clear-fix" data-dismiss="modal">Close</button>
                         </div>
                     </div>
 

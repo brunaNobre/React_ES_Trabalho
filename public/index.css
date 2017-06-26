@@ -10,6 +10,10 @@ ul {
     list-style: none;
 }
 
+.clear-fix {
+    clear: both;
+}
+
 .App-header {
     background-color: rgba(29,30, 34, 0.98);
     position: fixed;
@@ -52,8 +56,7 @@ ul {
     display: inline-block;
     width: 8vw;
     text-align: center;
-    border-bottom: 2px solid white;
-    margin-right: 4%;
+    margin-right: 2%;
 }
 
 .App-navbar  ul > li:hover {
@@ -127,8 +130,51 @@ ul {
     color: white;
 }
 
+.modal-body {
+    padding: 20px;
+}
+
 .modal-img {
     float: left;
+    margin-right: 5%;
+    margin-bottom: 5%;
+}
+
+.modal-title {
+    font-size: 250%;
+    text-transform: uppercase;
+    font-weight: 900;
+    margin-bottom: 5%;
+}
+
+.modal-desc {
+    font-size: 1.1vw;
+}
+
+.rating {
+    float: left;
+    border: 2px solid #FF0D46;
+    padding: 3%;
+    border-radius: 100%;
+    height: 5.3vw;
+    width: 5.3vw;
+    text-align: center;
+    margin-top: 7%;
+}
+
+.rate-container {
+    margin-left: -20%;
+}
+
+.modal-rate {
+    color: #FF0D46;
+    font-size: 2vw;
+}
+
+.rate-detail {
+    color: gray;
+    font-weight: 900;
+    font-size: 90%;
 }
 
 .modal-footer {
@@ -139,54 +185,57 @@ ul {
     color: #FF0D46;
     border: none;
     background-color: transparent;
-    margin: auto;
+    margin-right: auto;
+    margin-left: auto;
     display: block;
+    font-size: 1.3vw;
+
 }
 
-.movie-title {
-    padding-top: 30px;
+.modal-card {
+    background-color: #363434;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 10px;
+
+}
+
+.modal-card ul {
+    padding: 0;
+}
+
+.modal-card li {
+    padding: 4%;
+    border-bottom: 2px solid rgba(29,30, 34, 0.98);
+}
+
+.modal-card a {
     color: white;
+    text-decoration: none;
+    font-size: 1.1vw;
 }
 
-.movie-image {
-    order: 1;
-    padding-right: 20px;
+.modal-card a span {
+    margin-right: 8%;
+    font-size: 2vw;
+    float: left;
 }
 
-.movie-information {
-    order: 1;
-    text-align: left;
+.modal-card a p {
+    margin-left: 15%;
+}
+
+
+.movie-header {
+    height: 30vw;
+    overflow-y: hidden;
+}
+
+.movie-header img {
+    vertical-align: middle;
     width: 100%;
 }
 
-.movie-information, .movie-reviews {
-    background: #f7f7f7;
-    box-shadow: 0px 5px 10px 0px #e8e6e6;
-    padding: 20px;
-    margin-bottom: 2%;
-}
-
-.movie-title h2, .movie-reviews h2 {
-    font-size: 32px;
-    margin: 0;
-}
-
-.movie-title hr {
-    margin-bottom: 30px;
-}
-
-.movie-container {
-    display: flex;
-}
-
-.movie-reviews {
-    text-align: left;
-    margin-top: 20px;
-}
-
-.review-author {
-    font-size: 12px;
-}
 
 .movie-listings {
     display: flex;
@@ -202,5 +251,37 @@ ul {
     font-size: 32px;
 }
 
+.App-footer {
+    position: fixed;
+    bottom: -8%;
+    width: 100%;
+    background-color: rgba(29,30, 34, 0.9);
+    transition: 0.3s;
+}
 
+.App-footer:hover {
+    bottom: 0;
+}
 
+.App-footer ul li:hover {
+    border: none;
+}
+
+.App-footer ul li a{
+    color: white;
+}
+
+.App-footer ul li a span{
+
+}
+
+.App-footer .fa-arrow-down {
+    font-size: 1vw;
+    color: white;
+    display: block;
+    width: 20%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    margin-top: 1%;
+}

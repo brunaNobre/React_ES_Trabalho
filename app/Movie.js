@@ -8,17 +8,13 @@ const Movie = (params) => {
     );
 
     return (
-        <div>
-            <div className="movie-title">
-                <h2>{movie.name}</h2>
-
-                <hr />
-            </div>
+        <div className="movie-page-container">
+        <div className="movie-header">
+            <img src={movie.image} alt=""/>
+        </div>
 
             <div className="movie-container">
-                <div className="movie-image">
-                    <img src={movie.image} />
-                </div>
+
 
                 <div className="movie-information">
                     <p><b>Director:</b> {movie.director}</p>
@@ -30,7 +26,7 @@ const Movie = (params) => {
             <div className="movie-reviews">
                 <h2>Reviews</h2>
 
-                <hr />
+
 
                 {movie.reviews.map((review, i) => (
                     <div key={i} className="movie-review">
