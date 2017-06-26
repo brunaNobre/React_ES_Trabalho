@@ -14,9 +14,12 @@ ul {
     clear: both;
 }
 
+.collapse {
+    top: -37%;
+}
+
 .App-header {
     background-color: rgba(29,30, 34, 0.9);
-    position: fixed;
     z-index: 9;
     width: 100%;
 
@@ -78,9 +81,7 @@ ul {
     width: 100%;
 }
 
-.home-container {
-    margin-top: 13vw;
-}
+
 
 
 .featured-movie {
@@ -238,6 +239,8 @@ ul {
 
 .movie-container {
     padding: 4%;
+    background-image: linear-gradient(rgba(29,30, 34, 1), rgba(29,30, 34, 1));
+
 }
 
 .movie-container .subtitle {
@@ -251,7 +254,9 @@ ul {
     margin-left: 0.5%;
 }
 
-
+.movie-information {
+    margin-bottom: 7%;
+}
 
 .movie-information p, .movie-information h3 {
     color: white;
@@ -279,7 +284,7 @@ ul {
 
 .movie-information .rating {
     position: absolute;
-    top: 25vw;
+    top: 27vw;
     left: 35%;
 }
 

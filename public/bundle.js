@@ -11519,75 +11519,6 @@ var App = __WEBPACK_IMPORTED_MODULE_0_react___default.a.createClass({
                     { className: 'container' },
                     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2_react_router_dom__["c" /* Route */], { path: '/home', component: __WEBPACK_IMPORTED_MODULE_3__Home__["a" /* default */] }),
                     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2_react_router_dom__["c" /* Route */], { path: '/movies/:movieId', component: __WEBPACK_IMPORTED_MODULE_4__Movie__["a" /* default */] })
-                ),
-                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                    'footer',
-                    { className: 'App-footer' },
-                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('span', { className: 'fa fa-arrow-down' }),
-                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                        'div',
-                        { className: 'App-navbar' },
-                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                            'ul',
-                            null,
-                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                'li',
-                                null,
-                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                    'a',
-                                    { href: '#' },
-                                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('span', { className: 'fa fa-film' }),
-                                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                        'p',
-                                        null,
-                                        'MOVIES'
-                                    )
-                                )
-                            ),
-                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                'li',
-                                null,
-                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                    'a',
-                                    { href: '#' },
-                                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('span', { className: 'fa fa-television' }),
-                                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                        'p',
-                                        null,
-                                        'TV SHOW'
-                                    )
-                                )
-                            ),
-                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                'li',
-                                null,
-                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                    'a',
-                                    { href: '#' },
-                                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('span', { className: 'fa fa-heart-o' }),
-                                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                        'p',
-                                        null,
-                                        'WATCHLIST'
-                                    )
-                                )
-                            ),
-                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                'li',
-                                null,
-                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                    'a',
-                                    { href: '#' },
-                                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('span', { className: 'fa fa-user-o' }),
-                                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                        'p',
-                                        null,
-                                        'PROFIL'
-                                    )
-                                )
-                            )
-                        )
-                    )
                 )
             )
         );
@@ -26335,11 +26266,6 @@ const Movie = params => {
         { className: 'movie-page-container' },
         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
             'div',
-            { className: 'movie-header' },
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { src: movie.image, alt: '' })
-        ),
-        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-            'div',
             { className: 'movie-container' },
             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                 'p',
@@ -26396,20 +26322,20 @@ const Movie = params => {
                         )
                     )
                 )
-            )
-        ),
-        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-            'div',
-            { className: 'movie-description' },
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                'h4',
-                null,
-                'SYNOPSIS:'
             ),
             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                'p',
-                null,
-                movie.description
+                'div',
+                { className: 'movie-description' },
+                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                    'h4',
+                    null,
+                    'SYNOPSIS:'
+                ),
+                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                    'p',
+                    null,
+                    movie.description
+                )
             )
         )
     );

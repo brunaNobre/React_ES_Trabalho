@@ -36,7 +36,7 @@ var App =  React.createClass ({
 
 
                     </div>
-                    <footer className="App-footer">
+                   {/* <footer className="App-footer">
                         <span className="fa fa-arrow-down"></span>
                         <div className="App-navbar">
                         <ul>
@@ -46,7 +46,7 @@ var App =  React.createClass ({
                             <li><a href="#"><span className="fa fa-user-o"></span><p>PROFIL</p></a></li>
                         </ul>
                         </div>
-                    </footer>
+                    </footer>*/}
                 </div>
             </HashRouter>
         );

@@ -13,9 +13,7 @@ const Movie = (params) => {
 
     return (
         <div className="movie-page-container">
-        <div className="movie-header">
-            <img src={movie.image} alt=""/>
-        </div>
+
 
             <div className="movie-container">
 
