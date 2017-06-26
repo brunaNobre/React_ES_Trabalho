@@ -9,7 +9,7 @@ var Home = React.createClass({
 
     getInitialState: function () {
         return {
-            movieID : 0,
+            movieID : 1,
             fade: "modal fade"
 
         }
@@ -30,15 +30,13 @@ var Home = React.createClass({
 
     render: function () {
 
-        const topFour = movies.slice(0, 4);
+        const topFour = movies.slice(0, 8);
 
         return (
-            <div>
-                <h2 className="featured-movies__header">
-                    Featured Movies
-                </h2>
+            <div className="home-container">
 
-                <hr />
+
+
 
                 <div className="row">
                     {topFour.map((movie, i) => (
@@ -46,6 +44,7 @@ var Home = React.createClass({
                         <FeaturedMovie
                             movie={movie}
                             key={i}
+                            onClick={this.changeId}
 
                         />
                     ))}

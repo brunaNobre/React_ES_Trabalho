@@ -1,51 +1,89 @@
 body {
     margin: 0;
     padding: 0;
-    font-family: sans-serif;
+    font-family: 'Montserrat', sans-serif;
     color: #212121;
     background-color: #141414;
 }
 
+ul {
+    list-style: none;
+}
+
 .App-header {
-    background-color: rgba(0, 0, 0, 0.5);
-    margin-top: -2%;
-    height: 7.5vw;
+    background-color: rgba(29,30, 34, 0.98);
+    position: fixed;
+    z-index: 9;
+    width: 100%;
+
 }
 
 .App-header a {
     color: #fff;
     font-size: 20px;
     text-decoration: none;
-    padding-right: 30px;
-    float: right;
 
 }
 
-.App-header h2 {
+.App-header .App-logo {
     font-size: 40px;
-    color: #e50914;
+    color: #FF0D46;
     padding: 1% 1.5%;
+    width: 50%;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+    display: block;
 }
 
-.App-header a:hover {
-    color: #e0e0e0;
+.App-navbar {
+    height: 4vw;
+    margin-top: 2vw;
 }
 
+.App-navbar  ul {
+    display: block;
+    text-align: center;
+    margin: auto;
+}
 
+.App-navbar  ul > li {
+    display: inline-block;
+    width: 8vw;
+    text-align: center;
+    border-bottom: 2px solid white;
+    margin-right: 4%;
+}
 
+.App-navbar  ul > li:hover {
+    border-bottom: 2px solid #FF0D46;
+}
 
+.App-navbar  ul > li > a {
+    font-size: 1.1vw;
+    padding: 5px;
+}
 
-/*.container {
-    margin: 0 auto;
-    width: 980px;
-}*/
+.App-navbar  ul > li > a:hover {
+ color: #FF0D46 !important;
 
+}
+
+.container {
+    width: 100%;
+}
+
+.home-container {
+    margin-top: 13vw;
+}
 
 
 .featured-movie {
     text-align: left;
-    margin-bottom: 2%;
+    padding: 0;
+
 }
+
 
 .featured-movies__header {
     margin-bottom: 15px;
@@ -56,6 +94,13 @@ body {
 .featured-movie__image img {
     width: 100%;
     display: block;
+    transition: 0.3s;
+}
+
+.featured-movie__image img:hover {
+    cursor: pointer;
+
+
 }
 
 .featured-movie p {
@@ -70,11 +115,25 @@ body {
     color: white;
 }
 
-hr {
-    margin-bottom: 15px;
-    background-color: #e0e0e0;
-    height: 1px;
-    border: 0;
+
+#myModal {
+    padding: 0;
+}
+
+.modal-content {
+    background-color: rgba(29,30, 34, 0.98);
+}
+
+.modal-footer {
+    border: none;
+}
+
+.modal-close {
+    color: #FF0D46;
+    border: none;
+    background-color: transparent;
+    margin: auto;
+    display: block;
 }
 
 .movie-title {

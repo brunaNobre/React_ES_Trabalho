@@ -5,7 +5,7 @@ import { BrowserRouter, Route, Link, HashRouter} from 'react-router-dom';
 
 import Home from './Home';
 import Movie from './Movie';
-import List from './List';
+
 
 
 var App =  React.createClass ({
@@ -14,15 +14,25 @@ var App =  React.createClass ({
             <HashRouter>
                 <div className="App">
                     <div className="App-header">
-                        <h2>Flix</h2>
-                        <Link to="/">Home</Link>
-                        <Link to="list">Movies</Link>
+                        <Link to="/home" className="App-logo">MOVIX</Link>
+                        <div className="App-navbar">
+                            <ul>
+                                <li><a href="#">FOR YOU</a></li>
+                                <li><a href="#">TOP</a></li>
+                                <li><a href="#">ACTION</a></li>
+                                <li><a href="#">COMEDY</a></li>
+                            </ul>
+                        </div>
+
+
+
 
                     </div>
                     <div className="container">
                         <Route path="/home" component={Home} />
+
                         <Route path="/movies/:movieId" component={Movie} />
-                        <Route path="/list" component={List} />
+
 
 
                     </div>
