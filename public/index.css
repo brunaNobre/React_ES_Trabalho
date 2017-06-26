@@ -216,6 +216,10 @@ ul {
     font-size: 1.1vw;
 }
 
+.modal-card a:hover {
+    color: #FF0D46;
+}
+
 .modal-card a span {
     margin-right: 8%;
     font-size: 2vw;
