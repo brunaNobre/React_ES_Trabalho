@@ -227,7 +227,7 @@ ul {
 
 
 .movie-header {
-    height: 30vw;
+    height: 11vw;
     overflow-y: hidden;
 }
 
@@ -269,7 +269,7 @@ ul {
 
 .movie-information .social-info {
     color: gray;
-    font-size: 1.4vw;
+    font-size: 1.2vw;
 }
 
 .movie-information .social-info span {
@@ -279,7 +279,7 @@ ul {
 
 .movie-information .rating {
     position: absolute;
-    top: 45vw;
+    top: 25vw;
     left: 35%;
 }
 
@@ -291,13 +291,19 @@ ul {
 }
 
 
+.movie-description {
+    background-color: white;
+    padding: 5%;
+}
 
-.movie-information .rating .modal-rate {
+.movie-description h4 {
+    font-weight: 900;
 
 }
 
-.movie-information .rating .rate-detail {
-
+.movie-description p {
+    font-size: 1.3vw;
+    color: dimgray;
 }
 
 .underline::after {

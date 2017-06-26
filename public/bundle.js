@@ -26400,33 +26400,17 @@ const Movie = params => {
         ),
         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
             'div',
-            { className: 'movie-reviews' },
+            { className: 'movie-description' },
             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                'h2',
+                'h4',
                 null,
-                'Reviews'
+                'SYNOPSIS:'
             ),
-            movie.reviews.map((review, i) => __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                'div',
-                { key: i, className: 'movie-review' },
-                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                    'h3',
-                    null,
-                    review.title,
-                    ' ',
-                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                        'span',
-                        { className: 'review-author' },
-                        'by ',
-                        review.author
-                    )
-                ),
-                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                    'p',
-                    null,
-                    review.body
-                )
-            ))
+            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                'p',
+                null,
+                movie.description
+            )
         )
     );
 };

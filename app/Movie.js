@@ -34,23 +34,13 @@ const Movie = (params) => {
                                 </span>
                     </p>
                 </div>
+                <div className="movie-description">
+                    <h4>SYNOPSIS:</h4>
+                    <p>{movie.description}</p>
+                </div>
             </div>
 
-            <div className="movie-reviews">
-                <h2>Reviews</h2>
 
-
-
-                {movie.reviews.map((review, i) => (
-                    <div key={i} className="movie-review">
-                        <h3>
-                            {review.title} <span className="review-author">by {review.author}</span>
-                        </h3>
-
-                        <p>{review.body}</p>
-                    </div>
-                ))}
-            </div>
         </div>
     );
 };
