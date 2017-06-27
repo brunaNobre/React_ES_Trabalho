@@ -11444,6 +11444,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_react_router_dom__ = __webpack_require__(56);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__Home__ = __webpack_require__(225);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__Movie__ = __webpack_require__(228);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__Welcome__ = __webpack_require__(229);
+
 
 
 
@@ -11466,7 +11468,7 @@ var App = __WEBPACK_IMPORTED_MODULE_0_react___default.a.createClass({
                     { className: 'App-header' },
                     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                         __WEBPACK_IMPORTED_MODULE_2_react_router_dom__["b" /* Link */],
-                        { to: '/home', className: 'App-logo' },
+                        { to: '/', className: 'App-logo' },
                         'MOVIX'
                     ),
                     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
@@ -11479,8 +11481,8 @@ var App = __WEBPACK_IMPORTED_MODULE_0_react___default.a.createClass({
                                 'li',
                                 null,
                                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                    'a',
-                                    { href: '#' },
+                                    __WEBPACK_IMPORTED_MODULE_2_react_router_dom__["b" /* Link */],
+                                    { to: '/home' },
                                     'FOR YOU'
                                 )
                             ),
@@ -11517,8 +11519,9 @@ var App = __WEBPACK_IMPORTED_MODULE_0_react___default.a.createClass({
                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                     'div',
                     { className: 'container' },
-                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2_react_router_dom__["c" /* Route */], { path: '/home', component: __WEBPACK_IMPORTED_MODULE_3__Home__["a" /* default */] }),
-                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2_react_router_dom__["c" /* Route */], { path: '/movies/:movieId', component: __WEBPACK_IMPORTED_MODULE_4__Movie__["a" /* default */] })
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2_react_router_dom__["c" /* Route */], { exact: true, path: '/', component: __WEBPACK_IMPORTED_MODULE_5__Welcome__["a" /* default */] }),
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2_react_router_dom__["c" /* Route */], { exact: true, path: '/home', component: __WEBPACK_IMPORTED_MODULE_3__Home__["a" /* default */] }),
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2_react_router_dom__["c" /* Route */], { exact: true, path: '/movies/:movieId', component: __WEBPACK_IMPORTED_MODULE_4__Movie__["a" /* default */] })
                 )
             )
         );
@@ -26318,7 +26321,7 @@ const Movie = params => {
                         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                             'span',
                             { className: 'rate-detail' },
-                            '/10'
+                            '/ 10'
                         )
                     )
                 )
@@ -26342,6 +26345,39 @@ const Movie = params => {
 };
 
 /* harmony default export */ __webpack_exports__["a"] = (Movie);
+
+/***/ }),
+/* 229 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(6);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
+
+
+var Welcome = __WEBPACK_IMPORTED_MODULE_0_react___default.a.createClass({
+    displayName: "Welcome",
+
+    render: function () {
+        return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+            "div",
+            { className: "container" },
+            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                "div",
+                { className: "welcome" },
+                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", { className: "layer" }),
+                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                    "h1",
+                    null,
+                    "Without movies, life would be a mistake."
+                ),
+                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("img", { src: "./welcome-bg.jpg", alt: "" })
+            )
+        );
+    }
+});
+
+/* harmony default export */ __webpack_exports__["a"] = (Welcome);
 
 /***/ })
 /******/ ]);

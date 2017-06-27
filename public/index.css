@@ -79,9 +79,42 @@ ul {
 
 .container {
     width: 100%;
+    padding: 0;
 }
 
+.welcome {
 
+}
+
+.layer {
+    background-color: rgba(255, 13, 70, 0.7);
+    mix-blend-mode: exclusion;
+    width: 100%;
+    height: 50vw;
+    position: absolute;
+    z-index: 9;
+}
+
+.welcome img {
+    display: block;
+    width: 100%;
+    filter: grayscale(100%);
+}
+
+.welcome h1 {
+    position: absolute;
+    z-index: 999;
+    color: white;
+    font-family: "Playfair Display", serif;
+    font-size: 5.5vw;
+    font-weight: 900;
+    width: 74vw;
+    text-align: center;
+    top: 47%;
+    left: 12%;
+    border: 3px solid white;
+    padding: 1.1% 3%;
+}
 
 
 .featured-movie {

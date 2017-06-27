@@ -28,7 +28,7 @@ const Movie = (params) => {
                     <p className="rating">
                                 <span className="rate-container">
                                 <span className="modal-rate">{movie.rate}</span>
-                                <span className="rate-detail">/10</span>
+                                <span className="rate-detail">/ 10</span>
                                 </span>
                     </p>
                 </div>
