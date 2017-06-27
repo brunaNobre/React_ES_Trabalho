@@ -2,6 +2,11 @@
 Esboço de aplicativo para estudo da biblioteca.<br>
 Simulação de SPA com React e React-Router
 
+## Demo
+[MOVIX - Live DEMO](https://movix-movies.000webhostapp.com/)
+
+
+
 # React #
 
 [React](https://facebook.github.io/react/) é uma biblioteca open source construída pelo Facebook, que fornece a camada<br>
