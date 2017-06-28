@@ -54,8 +54,8 @@ var ModalMovieDetail = React.createClass({
 
                             <div className="modal-card clear-fix">
                                 <ul>
-                                    <li><a href="#"><span className="fa fa-heart-o"></span><p>ADD TO WATCHLIST</p></a></li>
-                                    <li><a href="#"><span className="fa fa-play-circle-o"></span><p>PLAY LAST TRAILER</p></a></li>
+                                    <li><a href="#" onClick={this.handleClick}><span className="fa fa-heart-o"></span><p>ADD TO WATCHLIST</p></a></li>
+                                    <li><a href="#" onClick={this.handleClick}><span className="fa fa-play-circle-o"></span><p>PLAY LAST TRAILER</p></a></li>
                                     <li><Link to={`/movies/${this.props.movieID}`} onClick={this.handleClick}>
                                         <span className="fa fa-info"></span><p>SHOW ALL DETAILS</p></Link></li>
                                 </ul>

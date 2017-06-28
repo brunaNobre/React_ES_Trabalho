@@ -26186,7 +26186,7 @@ var ModalMovieDetail = __WEBPACK_IMPORTED_MODULE_0_react___default.a.createClass
                                     null,
                                     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                                         'a',
-                                        { href: '#' },
+                                        { href: '#', onClick: this.handleClick },
                                         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('span', { className: 'fa fa-heart-o' }),
                                         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                                             'p',
@@ -26200,7 +26200,7 @@ var ModalMovieDetail = __WEBPACK_IMPORTED_MODULE_0_react___default.a.createClass
                                     null,
                                     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                                         'a',
-                                        { href: '#' },
+                                        { href: '#', onClick: this.handleClick },
                                         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('span', { className: 'fa fa-play-circle-o' }),
                                         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                                             'p',
