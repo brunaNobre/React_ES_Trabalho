@@ -32,6 +32,7 @@ var App =  React.createClass ({
                     <div className="container">
                         <Route exact path="/" component={Welcome} />
                         <Route exact path="/home" component={Home} />
+                        {/*<Route exact path="/search" component={Search}/>*/}
 
                         <Route exact path="/movies/:movieId" component={Movie} />
 
