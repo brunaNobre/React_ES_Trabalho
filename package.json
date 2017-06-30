@@ -13,10 +13,7 @@
     "babel-core": "^6.25.0",
     "babel-loader": "^7.1.0",
     "babel-preset-react": "^6.24.1",
-    "css-loader": "^0.28.4",
     "json-loader": "^0.5.4",
-    "sass-loader": "^6.0.6",
-    "style-loader": "^0.18.2",
     "webpack": "^3.0.0"
   },
   "scripts": {

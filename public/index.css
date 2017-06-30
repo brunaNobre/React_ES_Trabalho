@@ -172,6 +172,7 @@ ul {
     float: left;
     margin-right: 5%;
     margin-bottom: 5%;
+
 }
 
 .modal-title {
@@ -190,25 +191,30 @@ ul {
     border: 2px solid #FF0D46;
     padding: 3%;
     border-radius: 100%;
-    height: 5.3vw;
-    width: 5.3vw;
-    text-align: center;
     margin-top: 7%;
 }
 
 .rate-container {
-    margin-left: -20%;
+    display: block;
+    font-size: 2vw;
+    width: 4vw;
+    height: 4vw;
 }
 
 .modal-rate {
     color: #FF0D46;
-    font-size: 2vw;
+    position: relative;
+    bottom: -15%;
+
 }
 
 .rate-detail {
     color: gray;
     font-weight: 900;
-    font-size: 90%;
+    font-size: 50%;
+    position: relative;
+    bottom: -15%;
+
 }
 
 .modal-footer {
@@ -346,6 +352,10 @@ ul {
 .movie-description p {
     font-size: 1.3vw;
     color: dimgray;
+}
+
+.search-container {
+    color: white;
 }
 
 .search {
