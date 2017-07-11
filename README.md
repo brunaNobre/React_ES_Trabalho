@@ -9,7 +9,7 @@ Simulação de SPA com React e React-Router
 ## Vídeos
 
 [Parte 1 - 4:55 min](https://www.youtube.com/watch?v=LF3GsXNsxQQ&feature=youtu.be)<br>
-[Parte 2](https://movix-movies.000webhostapp.com/)<br>
+[Parte 2 - 9:00 min](https://www.youtube.com/watch?v=mF-vgvS4CME&t=61s)<br>
 [Parte 3](https://movix-movies.000webhostapp.com/)
 
 
