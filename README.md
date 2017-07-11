@@ -8,7 +8,7 @@ Simulação de SPA com React e React-Router
 
 ## Vídeos
 
-[Explicação da estrutura e funcionamento do projeto](https://www.youtube.com/watch?v=LF3GsXNsxQQ&list=PLrx5t5XxtYJCDvISOArZj8PYPXn27bjEr)
+[Explicação da estrutura e funcionamento do projeto.](https://www.youtube.com/watch?v=LF3GsXNsxQQ&list=PLrx5t5XxtYJCDvISOArZj8PYPXn27bjEr)
 
 
 
