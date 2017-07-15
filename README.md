@@ -6,9 +6,6 @@ Simulação de SPA com React e React-Router
 [MOVIX - Live DEMO](https://movix-movies.000webhostapp.com/)
 
 
-## Vídeos
-
-[Explicação da estrutura e funcionamento do projeto.](https://www.youtube.com/watch?v=LF3GsXNsxQQ&list=PLrx5t5XxtYJCDvISOArZj8PYPXn27bjEr)
 
 
 
